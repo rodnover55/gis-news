@@ -52,7 +52,11 @@ a {
 
 .news {
   margin-bottom: 25px;
-  
+
+  &:hover {
+    background-color: #F2F4F6;
+  }
+
   &__title {
     font-weight: bold;
     font-family: $font;
