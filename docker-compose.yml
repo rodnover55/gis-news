@@ -7,3 +7,4 @@ db:
     - "5432:5432"
   volumes:
     - '.:/root/project'
+    - '/var/lib/postgresql/data:/var/lib/postgresql/data'
