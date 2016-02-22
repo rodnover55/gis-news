@@ -15,7 +15,8 @@ class NewsService
             'content' => array_get($data, 'content'),
             'date_news' => json_encode([
                 'time_news' => array_get($data, 'date')
-            ])
+            ]),
+            'link' => array_get($data, 'link')
         ]);
 
         $latitude = array_get($data, 'latitude');

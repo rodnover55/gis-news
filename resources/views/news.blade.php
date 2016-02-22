@@ -14,6 +14,10 @@
         <div class="row"><div class="col-md-6">
             <form action="news" role="form" method="post">
                 <div class="form-group">
+                    <label for="news-title">Откуда</label>
+                    <input type="text" class="form-control" id="news-title" name="link">
+                </div>
+                <div class="form-group">
                     <label for="news-title">О чем</label>
                     <input type="text" class="form-control" id="news-title" name="title">
                 </div>

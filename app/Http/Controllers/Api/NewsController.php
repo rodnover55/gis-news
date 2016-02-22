@@ -1,6 +1,7 @@
 <?php
 namespace App\Http\Controllers\Api;
 
+use App\Core\Services\NewsService;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\NewsStoreRequest;
 
@@ -9,7 +10,7 @@ use App\Http\Requests\NewsStoreRequest;
  */
 class NewsController extends Controller
 {
-    public function index() {
+    public function index(NewsService $newsService) {
 
     }
 

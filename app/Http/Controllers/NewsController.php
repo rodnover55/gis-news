@@ -14,6 +14,7 @@ class NewsController extends Controller
 
     public function store(NewsStoreRequest $request, NewsService $newsService) {
         $newsService->store($request->all());
+
         return redirect('news');
     }
 }
