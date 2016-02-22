@@ -2009,6 +2009,10 @@ $(function() {
             news: news.map(function(news) {
                 news.domain = news.link ? getLocation(news.link).hostname : '';
 
+                if (news.content.length > 170) {
+                    news.content = news.content.substring(0, 167) + '...';
+                }
+
                 return news;
             })
         }));
