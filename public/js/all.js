@@ -1954,6 +1954,15 @@ $(function() {
 
     var news = [];
 
+    var categories = {
+        'culture': 'К',
+        'social': 'О',
+        'policy': 'П',
+        'accident': 'П',
+        'sport': 'С',
+        'economy': 'Э'
+    }
+
     var templates = {
         news: Handlebars.compile($("#template-news").html())
     };
@@ -1980,8 +1989,15 @@ $(function() {
                 item.markers = item.addresses.filter(function (address) {
                     return (address.latitude != null) &&  (address.longitude != null);
                 }).map(function (address) {
-
-                    var marker = DG.marker([address.latitude, address.longitude]).addTo(map);
+                    console.log('category-' + item.id_category);
+                    var marker = DG.marker([address.latitude, address.longitude], {
+                        icon: DG.divIcon({
+                            className: 'category-' + item.id_category,
+                            iconAnchor: [19, 53],
+                            iconSize: [38, 50],
+                            html: categories[item.id_category]
+                        })
+                    }).addTo(map);
                     marker.news = item;
 
 

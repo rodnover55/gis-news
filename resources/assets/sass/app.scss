@@ -1,5 +1,7 @@
 @import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
 @import url('http://fonts.googleapis.com/css?family=Open+Sans');
+@import 'node_modules/sass-svg/index';
+
 
 $font: "Open Sans";
 $sideBar: 332px;
@@ -106,4 +108,41 @@ a {
 .news-list {
   height: calc(100vh - 43px);
   overflow: scroll;
+}
+
+@mixin pin($color) {
+  background-color: $color;
+  -webkit-mask-image: url(/images/map-pin.svg);
+  mask-image: url(/images/map-pin.svg);
+  height: 50px !important;
+  width: 38px !important;
+  padding: 8px 14px;
+  text-transform: uppercase;
+  font-weight: bolder;
+  font-size: 15px;
+  color: white;
+}
+
+.category-culture {
+  @include pin(#4CB768)
+}
+
+.category-social {
+  @include pin(#9E56B3)
+}
+
+.category-policy {
+  @include pin(#955318)
+}
+
+.category-accident {
+  @include pin(#E84545)
+}
+
+.category-sport {
+  @include pin(#4C83B7)
+}
+
+.category-economy {
+  @include pin(#42B9BA)
 }

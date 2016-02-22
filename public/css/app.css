@@ -5827,4 +5827,76 @@ a {
   height: calc(100vh - 43px);
   overflow: scroll; }
 
+.category-culture {
+  background-color: #4CB768;
+  -webkit-mask-image: url(/images/map-pin.svg);
+  mask-image: url(/images/map-pin.svg);
+  height: 50px !important;
+  width: 38px !important;
+  padding: 8px 14px;
+  text-transform: uppercase;
+  font-weight: bolder;
+  font-size: 15px;
+  color: white; }
+
+.category-social {
+  background-color: #9E56B3;
+  -webkit-mask-image: url(/images/map-pin.svg);
+  mask-image: url(/images/map-pin.svg);
+  height: 50px !important;
+  width: 38px !important;
+  padding: 8px 14px;
+  text-transform: uppercase;
+  font-weight: bolder;
+  font-size: 15px;
+  color: white; }
+
+.category-policy {
+  background-color: #955318;
+  -webkit-mask-image: url(/images/map-pin.svg);
+  mask-image: url(/images/map-pin.svg);
+  height: 50px !important;
+  width: 38px !important;
+  padding: 8px 14px;
+  text-transform: uppercase;
+  font-weight: bolder;
+  font-size: 15px;
+  color: white; }
+
+.category-accident {
+  background-color: #E84545;
+  -webkit-mask-image: url(/images/map-pin.svg);
+  mask-image: url(/images/map-pin.svg);
+  height: 50px !important;
+  width: 38px !important;
+  padding: 8px 14px;
+  text-transform: uppercase;
+  font-weight: bolder;
+  font-size: 15px;
+  color: white; }
+
+.category-sport {
+  background-color: #4C83B7;
+  -webkit-mask-image: url(/images/map-pin.svg);
+  mask-image: url(/images/map-pin.svg);
+  height: 50px !important;
+  width: 38px !important;
+  padding: 8px 14px;
+  text-transform: uppercase;
+  font-weight: bolder;
+  font-size: 15px;
+  color: white; }
+
+.category-economy {
+  background-color: #42B9BA;
+  -webkit-mask-image: url(/images/map-pin.svg);
+  mask-image: url(/images/map-pin.svg);
+  height: 50px !important;
+  width: 38px !important;
+  padding: 8px 14px;
+  text-transform: uppercase;
+  font-weight: bolder;
+  font-size: 15px;
+  color: white; }
+
 /*# sourceMappingURL=app.css.map */
