@@ -15,11 +15,15 @@
             <form action="news" role="form" method="post">
                 <div class="form-group">
                     <label for="news-title">Откуда</label>
-                    <input type="text" class="form-control" id="news-title" name="link">
+                    <input type="text" class="form-control" id="news-link" name="link">
                 </div>
                 <div class="form-group">
                     <label for="news-title">О чем</label>
                     <input type="text" class="form-control" id="news-title" name="title">
+                </div>
+                <div class="form-group">
+                    <label for="news-title">Картинка</label>
+                    <input type="text" class="form-control" id="news-image" name="image">
                 </div>
                 <div class="form-group">
                     <label for="news-content">Что</label>
