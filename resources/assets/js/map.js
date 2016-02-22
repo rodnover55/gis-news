@@ -1,7 +1,7 @@
 $(function() {
     var map;
 
-    var markers;
+    var markers = [];
 
     DG.then(function () {
         if ($('#map').length == 0) {
@@ -13,12 +13,24 @@ $(function() {
             zoom: 11
         });
 
-        var news = services.getNews();
-        var item;
 
-        for (var key in news) {
-            item = news[key];
-            DG.marker([item.lat, item.lon]).addTo(map);
-        }
+        services.getNews().then(function (news) {
+            var item;
+
+            for (var key in news) {
+                item = news[key];
+
+                markers.push(item.addresses.filter(function (address) {
+                    return (address.latitude != null) &&  (address.longitude != null);
+                }).map(function (address) {
+                    var marker = DG.marker([address.latitude, address.longitude]).addTo(map);
+                    marker.news = item;
+
+
+                    return marker;
+                }));
+            }
+        });
+
     });
 });

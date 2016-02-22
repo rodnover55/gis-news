@@ -15,6 +15,7 @@ elixir(function(mix) {
     mix.sass('app.scss');
     mix.scripts([
         'vendor/jquery.min.js',
+        'vendor/q.js',
         'services.js',
         'map.js'
     ]);
