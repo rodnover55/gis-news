@@ -11,7 +11,9 @@ use App\Http\Requests\NewsStoreRequest;
 class NewsController extends Controller
 {
     public function index(NewsService $newsService) {
+        $news = $newsService->getAll();
 
+        return response()->json($news);
     }
 
     public function store(NewsStoreRequest $request) {

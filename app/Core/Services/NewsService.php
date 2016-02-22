@@ -36,9 +36,9 @@ class NewsService
         return $news->toArray();
     }
 
-    public function getAll($criteria) {
-        return [
+    public function getAll($criteria = []) {
+        $news = NewsModel::with('addresses')->get();
 
-        ];
+        return $news->toArray();
     }
 }
