@@ -5789,7 +5789,7 @@ a {
 
 .news {
   padding: 0px 15px 25px 15px; }
-  .news:hover {
+  .news:hover, .news._hover {
     background-color: #F2F4F6; }
   .news__title {
     font-weight: bold;

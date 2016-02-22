@@ -20,7 +20,7 @@
         </div>
         <script id="template-news" type="text/x-handlebars-template">
         @{{#each news}}
-            <div class="news" data-id-news="@{{news.id}}">
+            <div class="news js-news" data-id-news="@{{id_news}}">
                 @{{#if image}}
                 <div class="news__image">
                     <img src="@{{image}}" alt="">

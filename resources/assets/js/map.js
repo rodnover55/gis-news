@@ -28,19 +28,16 @@ $(function() {
             zoom: 11
         });
 
-
-
         services.getNews().then(function (data) {
-            news = data;
+            news = [];
             var item;
 
-            for (var key in news) {
-                item = news[key];
+            for (var key in data) {
+                item = data[key];
 
                 item.markers = item.addresses.filter(function (address) {
                     return (address.latitude != null) &&  (address.longitude != null);
                 }).map(function (address) {
-                    console.log('category-' + item.id_category);
                     var marker = DG.marker([address.latitude, address.longitude], {
                         icon: DG.divIcon({
                             className: 'category-' + item.id_category,
@@ -49,11 +46,20 @@ $(function() {
                             html: categories[item.id_category]
                         })
                     }).addTo(map);
+
                     marker.news = item;
 
+                    marker.on('mouseover', function (e) {
+                        $('.js-news').removeClass('_hover');
+                        $('.js-news[data-id-news=' + e.target.news.id_news + ']').addClass('_hover');
+                    }).on('mouseout', function (e) {
+                        $('.js-news').removeClass('_hover');
+                    });
 
                     return marker;
                 });
+
+                news[item.id_news] = item;
 
                 markers.push(item.markers);
             }
@@ -83,5 +89,23 @@ $(function() {
                 return news;
             })
         }));
-    }
+    };
+
+    $(document).on('mouseenter', '.js-news', function (e) {
+        var id = $(this).data('idNews');
+
+        if (id in news) {
+            for (key in news[id].markers) {
+                news[id].markers[key].setOpacity(0.8);
+            }
+        }
+    }).on('mouseleave', '.js-news', function (e) {
+        var id = $(this).data('idNews');
+
+        if (id in news) {
+            for (key in news[id].markers) {
+                news[id].markers[key].setOpacity(1);
+            }
+        }
+    });
 });

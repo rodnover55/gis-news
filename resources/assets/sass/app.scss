@@ -55,7 +55,7 @@ a {
 .news {
   padding: 0px 15px 25px 15px;
 
-  &:hover {
+  &:hover, &._hover {
     background-color: #F2F4F6;
   }
 
