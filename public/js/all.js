@@ -2004,7 +2004,7 @@ $(function() {
                         $news.addClass('_hover');
                         $('.js-news-list').scrollTop($news.offset().top);
                     }).on('mouseout', function (e) {
-                        $('.js-news').removeClass('_hover');
+                        $('.js-news[data-id-news=' + e.target.news.id_news + ']').removeClass('_hover');
                     });
 
                     return marker;
