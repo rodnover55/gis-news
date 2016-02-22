@@ -1,2 +1,23 @@
-// @import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
+@import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
 
+body {
+  position: relative;
+  margin: 0;
+}
+
+.js-map {
+  position: fixed;
+  left: 332px;
+  right:0;
+  top: 43px;
+  bottom:0;
+}
+
+.b-header {
+  height: 43px;
+  background-color: #F2F4F6;
+}
+
+.b-sidebar {
+  width: 250px;
+}

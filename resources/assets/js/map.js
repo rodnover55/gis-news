@@ -1,6 +1,8 @@
 $(function() {
     var map;
 
+    var markers;
+
     DG.then(function () {
         map = DG.map('map', {
             center: [54.95, 73.31],

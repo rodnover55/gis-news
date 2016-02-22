@@ -27,5 +27,7 @@ Route::get('/', function () {
 */
 
 Route::group(['middleware' => ['web']], function () {
-    Route::get('/api/news', 'NewsController@index');
+    Route::get('/api/news', 'Api\NewsController@index');
+    Route::get('/news', 'NewsController@index');
+    Route::post('/news', 'NewsController@store');
 });
