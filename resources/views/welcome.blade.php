@@ -14,7 +14,7 @@
         </div>
         <div class="b-content">
             <div class="b-sidebar">
-                <div class="news-list"></div>
+                <div class="news-list js-news-list"></div>
             </div>
             <div id="map" class="b-map"></div>
         </div>
