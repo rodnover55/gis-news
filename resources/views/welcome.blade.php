@@ -23,7 +23,7 @@
             <div class="news">
                 @{{#if image}}
                 <div class="news__image">
-                    @{{image}}
+                    <img src="@{{image}}" alt="">
                 </div>
                 @{{/if}}
                 <div class="news__title">

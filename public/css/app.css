@@ -5819,6 +5819,12 @@ a {
   font-size: 12px;
   color: #2045d0; }
 
+.news__image {
+  margin: 0px -15px; }
+
+.news img {
+  width: 100%; }
+
 .news-list {
   height: calc(100vh - 43px);
   overflow: scroll;
