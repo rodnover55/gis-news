@@ -18,12 +18,15 @@ class NewsService
             ])
         ]);
 
+        $latitude = array_get($data, 'latitude');
+        $longitude = array_get($data, 'longitude');
+
         $address = $news->addresses()->create([
             'object' => json_encode([
                 'raw' => array_get($data, 'address')
             ]),
-            'latitude' => array_get($data, 'latitude'),
-            'longitude' => array_get($data, 'longitude'),
+            'latitude' => empty($latitude) ? (null) : $latitude,
+            'longitude' => empty($longitude) ? (null) : $longitude
         ]);
 
         $news->addresses()->save($address);

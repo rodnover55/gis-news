@@ -27,8 +27,13 @@
                 </div>
                 <div class="form-group">
                     <label>Координаты</label>
-                    <input type="text" class="form-control" id="news-address" name="latitude">
-                    <input type="text" class="form-control" id="news-address" name="longitude">
+                    <input type="text" class="form-control js-insert-map-lat" id="news-address" name="latitude">
+                    <input type="text" class="form-control js-insert-map-lon" id="news-address" name="longitude">
+                </div>
+                <div class="form-group">
+                    <div id="insert-map" class="js-insert-map b-insert-map">
+
+                    </div>
                 </div>
                 <div class="form-group">
                     <label for="news-date">Когда</label>
@@ -50,5 +55,38 @@
             </form>
         </div></div>
     </div>
+    <script type="text/javascript">
+        DG.then(function () {
+            var map = DG.map('insert-map', {
+                center: [54.95, 73.31],
+                zoom: 11
+            });
+
+            var marker;
+            var $lat = $('.js-insert-map-lat');
+            var $lng = $('.js-insert-map-lon');
+
+            map.on('click', function(e) {
+                var lat = e.latlng.lat;
+                var lng = e.latlng.lng;
+
+                if (marker) {
+                    marker.setLatLng(DG.latLng(lat, lng));
+                } else {
+                    marker = DG.marker([lat, lng]).addTo(map);
+                }
+
+                $lat.val(lat);
+                $lng.val(lng);
+            });
+
+        });
+    </script>
+    <style>
+        .b-insert-map {
+            width: 600px;
+            height: 300px;
+        }
+    </style>
 </body>
 </html>
