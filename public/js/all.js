@@ -2002,7 +2002,8 @@ $(function() {
                         $('.js-news').removeClass('_hover');
                         var $news = $('.js-news[data-id-news=' + e.target.news.id_news + ']');
                         $news.addClass('_hover');
-                        $('.js-news-list').scrollTop($news.offset().top);
+                        console.log($news.offset().top - $news.parent().offset().top - 15);
+                        $('.js-news-list').scrollTop($news.offset().top - $news.parent().offset().top - 15);
                     }).on('mouseout', function (e) {
                         $('.js-news[data-id-news=' + e.target.news.id_news + ']').removeClass('_hover');
                     });
