@@ -1,6 +1,5 @@
 <?php
 namespace App\Core\Services;
-use App\Core\Models\AddressModel;
 use App\Core\Models\NewsModel;
 
 /**

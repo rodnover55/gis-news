@@ -16,6 +16,7 @@ elixir(function(mix) {
     mix.scripts([
         'vendor/jquery.min.js',
         'vendor/q.js',
+        'vendor/handlebars.min.js',
         'services.js',
         'map.js'
     ]);

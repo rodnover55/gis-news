@@ -5,6 +5,7 @@
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
+@import url("http://fonts.googleapis.com/css?family=Open+Sans");
 html {
   font-family: sans-serif;
   -ms-text-size-adjust: 100%;
@@ -5751,20 +5752,76 @@ button.close {
 
 body {
   position: relative;
-  margin: 0; }
+  margin: 0;
+  font-family: "Open Sans"; }
 
-.js-map {
-  position: fixed;
-  left: 332px;
-  right: 0;
-  top: 43px;
-  bottom: 0; }
+a {
+  cursor: pointer; }
+
+.b-map {
+  height: calc(100vh - 43px);
+  width: calc(100vw - 347px);
+  float: right;
+  left: -15px; }
 
 .b-header {
   height: 43px;
   background-color: #F2F4F6; }
+  .b-header::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: inline;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    z-index: 10; }
 
 .b-sidebar {
-  width: 250px; }
+  width: 332px;
+  float: left;
+  overflow: hidden; }
+
+.logo__image {
+  width: auto;
+  height: 100%; }
+
+.news__title {
+  font-weight: bold;
+  font-family: "Open Sans";
+  font-size: 15px;
+  margin: 15px 0px; }
+
+.news__content {
+  margin: 15px 0px;
+  font-size: 12px;
+  line-height: 18px; }
+
+.news__link {
+  margin: 15px 0px;
+  margin-bottom: 20px;
+  border: solid #2045D0 1px;
+  color: #2045D0;
+  border-radius: 5px;
+  padding: 7px 13px;
+  font-size: 10px;
+  text-transform: uppercase;
+  width: 150px;
+  letter-spacing: 1px;
+  cursor: pointer; }
+
+.news__date {
+  font-size: 12px;
+  color: #666; }
+
+.news__domain {
+  font-size: 12px;
+  color: #2045d0; }
+
+.news-list {
+  height: calc(100vh - 43px);
+  overflow: scroll;
+  padding: 15px; }
 
 /*# sourceMappingURL=app.css.map */

@@ -12,4 +12,8 @@ class NewsModel extends Model
     public function addresses() {
         return $this->hasMany(AddressModel::class, 'id_news');
     }
+
+    public function getDateNewsAttribute($value) {
+        return json_decode($value);
+    }
 }
